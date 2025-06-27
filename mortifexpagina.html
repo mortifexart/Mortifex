@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="MortifexOficial - Colección de tres dólares">
+  <meta name="keywords" content="mortifex, joyas, anillos, collares, tienda, tres dólares">
+  <meta name="author" content="MortifexOficial">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MortifexOficial - Colección de 3$</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #000;
+      color: white;
+      text-align: center;
+    }
+
+    header {
+      background: url('https://i.imgur.com/8KMdZKK.jpg') no-repeat center center/cover;
+      padding: 60px 20px;
+    }
+
+    header h1 {
+      font-family: 'Georgia', serif;
+      font-size: 2.5em;
+      background-color: rgba(0, 0, 0, 0.6);
+      display: inline-block;
+      padding: 10px 20px;
+      border: 2px solid white;
+    }
+
+    .productos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 30px auto;
+      max-width: 1000px;
+    }
+
+    .producto {
+      background-color: #111;
+      border: 1px solid #333;
+      border-radius: 10px;
+      margin: 10px;
+      padding: 10px;
+      width: 150px;
+    }
+
+    .producto img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .precio {
+      margin-top: 10px;
+      font-weight: bold;
+      color: #0f0;
+    }
+
+    .nav {
+      margin: 30px;
+    }
+
+    .nav button {
+      background-color: #fff;
+      color: #000;
+      padding: 10px 20px;
+      margin: 5px;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .nav button:hover {
+      background-color: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Colección de tres dólares</h1>
+  </header>
+
+  <div class="productos" id="productos">
+    <!-- Los productos se insertarán por JavaScript -->
+  </div>
+
+  <div class="nav">
+    <button onclick="window.location.href='coleccion2.html'">colección de 2$</button>
+    <button onclick="window.location.href='coleccion4.html'">colección de 4$</button>
+    <button onclick="window.location.href='coleccion5.html'">colección de 5$</button>
+    <button onclick="window.location.href='precios-altos.html'">precios altos</button>
+  </div>
+
+  <script>
+    const productos = [
+      { img: "https://i.imgur.com/E8kSx6J.png", nombre: "Anillo Calavera", precio: "3$" },
+      { img: "https://i.imgur.com/1S2wOjT.png", nombre: "Anillo Dragón", precio: "3$" },
+      { img: "https://i.imgur.com/74vxC2n.png", nombre: "Anillo Punk", precio: "3$" },
+      { img: "https://i.imgur.com/WrT3kQI.png", nombre: "Anillo Esferas", precio: "3$" },
+      { img: "https://i.imgur.com/OboURhl.png", nombre: "Pulsera Púas", precio: "3$" },
+      { img: "https://i.imgur.com/L9PYW6R.png", nombre: "Collar Picos", precio: "3$" },
+      { img: "https://i.imgur.com/1nZBZyK.png", nombre: "Anillo Serpiente", precio: "3$" },
+      { img: "https://i.imgur.com/8r3gPaC.png", nombre: "Collares Guitarra", precio: "3$" },
+    ];
+
+    const contenedor = document.getElementById("productos");
+
+    productos.forEach(p => {
+      contenedor.innerHTML += `
+        <div class="producto">
+          <img src="${p.img}" alt="${p.nombre}">
+          <div class="precio">${p.precio}</div>
+        </div>
+      `;
+    });
+  </script>
+</body>
+</html>
